@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shopping List</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script DOMContentLoaded src="index.js"></script>
+    </head>
+    <body class="bg-emerald-100">
+        <div
+            class="relative flex min-h-screen bg-emerald-50 flex-col content-center mx-[10vw]"
+        >
+            <h1
+                class="text-5xl leading-loose flex justify-center py-5 text-emerald-600"
+            >
+                Shopping List
+            </h1>
+            <div
+                class="add-item flex flex-row flex-nowrap gap-x-8 justify-center bg-emerald-600 py-7 rounded-lg mx-[3vw]"
+            >
+                <h3 class="flex items-center text-emerald-50">Add Item</h3>
+                <input
+                    class="flex text-center rounded-full focus:outline-emerald-50"
+                    type="text"
+                    value="Milk"
+                />
+                <button
+                    class="bg-emerald-700 rounded-full px-6 py-1 text-emerald-50"
+                >
+                    Submit
+                </button>
+            </div>
+
+            <ul class="flex flex-nowrap flex-col">
+                <li class="flex justify-center">Hello</li>
+                <li class="flex justify-center">My</li>
+                <li class="flex justify-center">Friend</li>
+            </ul>
+        </div>
+    </body>
+</html>
