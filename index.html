@@ -6,9 +6,9 @@
         <title>Shopping List</title>
         <link rel="stylesheet" href="style.css" />
         <script src="https://cdn.tailwindcss.com"></script>
-        <script DOMContentLoaded src="index.js"></script>
+        <script defer load src="index.js"></script>
     </head>
-    <body class="bg-emerald-100">
+    <body class="bg-emerald-100 min-w-[800px]">
         <div
             class="relative flex min-h-screen bg-emerald-50 flex-col content-center mx-[10vw]"
         >
@@ -18,11 +18,17 @@
                 Shopping List
             </h1>
             <div
-                class="add-item flex flex-row flex-nowrap gap-x-8 justify-center bg-emerald-600 py-7 rounded-lg mx-[3vw]"
+                class="add-item flex flex-row flex-nowrap gap-x-9 justify-center bg-emerald-600 py-7 rounded-lg mx-[3vw]"
             >
-                <h3 class="flex items-center text-emerald-50">Add Item</h3>
+                <h3
+                    class="flex items-center text-emerald-50"
+                    id="submit-button"
+                >
+                    Add Item
+                </h3>
                 <input
                     class="flex text-center rounded-full focus:outline-emerald-50"
+                    id="list-name-input"
                     type="text"
                     value="Milk"
                 />
@@ -33,27 +39,10 @@
                 </button>
             </div>
 
-            <ul class="flex flex-nowrap flex-col gap-y-4 py-7">
-                <li
-                    class="flex flex-row justify-center gap-x-[10vw] bg-emerald-300 rounded-md mx-[13vw] px-5 py-6 text-emerald-950 text-3xl"
-                >
-                    <p>Hello</p>
-                    <svg
-                        class="h-8 w-8 text-red-500 justify-self-end self-end"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                    >
-                        <path stroke="none" d="M0 0h24v24H0z" />
-                        <line x1="18" y1="6" x2="6" y2="18" />
-                        <line x1="6" y1="6" x2="18" y2="18" />
-                    </svg>
-                </li>
+            <ul
+                class="flex flex-row flex-nowrap flex-col gap-y-4 py-7 justify-center"
+                id="item-list"
+            >
                 <li class="flex justify-center">My</li>
                 <li class="flex justify-center">Friend</li>
             </ul>
